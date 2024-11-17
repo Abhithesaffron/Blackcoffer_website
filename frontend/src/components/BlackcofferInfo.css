@@ -1,0 +1,108 @@
+  
+
+.container {  
+    max-width: 100vw;
+    padding: 23px;
+    margin-left: 0px;
+    background: #0e0e0e;
+}  
+
+h3,h4 {  
+    text-align: left;  
+    font-size: 20px;
+    margin-left:25px;
+}  
+
+h4{
+    font-weight: -10;
+    font-size: 16px;
+}
+
+.grid {  
+    display: grid;  
+    width: 90vw;
+    grid-template-columns: repeat(20, 1fr);  
+    gap: 0; /* Removed gap between grid boxes */  
+    margin: 20px 0;  
+    border: 1px solid rgb(71, 70, 70);  
+    border-radius: 40px 0px 40px 40px;  
+    margin:0px 50px;
+    /* height: 50vh; */
+}  
+
+.box {  
+    background-color: transparent;  
+    border: 1px solid rgb(71, 70, 70);  
+    text-align: center;  
+    position: relative;  
+    margin: 0; /* Ensure no extra margin around boxes */  
+}  
+
+.box img {  
+    width: 100%;  
+    height: 100%;  
+    object-fit: cover; /* Ensures the image covers the box without distortion */  
+    border-radius: inherit;  
+}  
+
+.Image {  
+    grid-column: span 6; /* Make the Image box span two columns */  
+    grid-row: span 3; /* Taller for the Image box */  
+    border-radius: 0px 0px 40px 0px;  
+    overflow: hidden; /* Ensures no content overflows */  
+}  
+
+.years {  
+    border-radius: 40px 0px 0px 0px; 
+    grid-column: span 4; 
+}  
+
+.big-data {  
+    border-radius: 0px 0px 0px 40px;  
+    grid-column: span 7;
+}  
+
+.ai {  
+    grid-column: span 6;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;  
+    position: relative; /* Ensures the overlay is positioned relative to this box */  
+    height: 100px;  
+    color: white; /* Ensures text is readable over the background */  
+    text-align: center;  
+}
+
+.ai::before {  
+    content: "";  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    background-image: url("https://img.freepik.com/free-vector/robotic-artificial-intelligence-technology-smart-lerning-from-bigdata_1150-48136.jpg?ga=GA1.1.91848471.1731676592&semt=ais_hybrid");  
+    background-size: cover;  
+    background-position: center;  
+    opacity: 0.7; /* Sets the background opacity */  
+    z-index: 1; /* Ensures the overlay is behind the text */  
+    border-radius: inherit; /* Ensures border-radius matches the box */  
+}
+
+.ai h4 , h5 {  
+    position: relative;  
+    z-index: 2; /* Ensures text appears above the background overlay */  
+    margin: 0;  
+}
+
+.clients, .employees, .countries {  
+    grid-column: span 4;  
+}  
+
+.retention{  
+    grid-column: span 6;  
+}  
+
+.dedicated {  
+    grid-column: span 7;  
+}  

@@ -1,0 +1,76 @@
+.footer-container {  
+  background-color: #0e0e0e;  
+  color: white;  
+  padding: 40px 20px;  
+  display: flex;  
+  justify-content: flex-end; /* Aligns all content to the right */  
+}  
+
+.footer {  
+  width: 100%;  
+  max-width: 1200px; /* Adjust the width as needed */  
+}  
+
+.footer-content {  
+  display: flex;  
+  justify-content: space-between;  
+  width: 50%; /* Ensures it occupies only half of the width */  
+}  
+
+.footer-section {  
+  width: 30%; /* Each section takes up their own space */  
+  margin: 0 20px; /* Provides spacing between sections */  
+}  
+
+.footer-section h4 {  
+  margin-bottom: 15px;  
+  font-size: 18px;  
+}  
+
+.footer-section p {  
+  margin: 5px 0;  
+  font-size: 14px;  
+}  
+
+.social-icons {  
+  margin-top: 15px;   
+  display: flex;  
+  /* flex-direction: column; */
+}  
+
+.social-icons a {  
+  margin-right: 10px;  
+  text-decoration: none;  
+  font-size: 15px; /* Larger icons */  
+  width: 25px; /* Set width for circular background */  
+  height: 25px; /* Set height for circular background */  
+  display: flex;  
+  /* flex-direction: column; */
+  justify-content: center;  
+  align-items: center;  
+  border-radius: 50%; /* Makes it circular */  
+  color: white; /* Icon color */  
+  transition: transform 0.2s; /* Smooth effect for hover */  
+}  
+
+/* Colorful background for icons */  
+.icon.facebook {  
+  background-color: #3b5998; /* Facebook color */  
+}  
+
+.icon.youtube {  
+  background-color: #FF0000; /* YouTube color */  
+}  
+
+.icon.linkedin {  
+  background-color: #0077b5; /* LinkedIn color */  
+}  
+
+.icon.twitter {  
+  background-color: #1DA1F2; /* Twitter color */  
+}  
+
+/* Optional hover effect */  
+.social-icons a:hover {  
+  transform: scale(1.1); /* Slight increase in size on hover */  
+}

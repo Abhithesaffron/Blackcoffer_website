@@ -1,0 +1,87 @@
+.services {
+    padding: 50px;
+    background: black; /* Black background */
+    color: white;
+    z-index: 1;
+    position: relative;
+  }
+
+  .services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black; /* Background color for services */
+    z-index: -1; /* Place it behind the content of services */
+  }
+  
+  .services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 40;
+    text-align: left;
+    color: white;
+    position: relative;
+    z-index: 2;
+
+  }
+  
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .service-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 300px;
+    width: 250px;
+    cursor: pointer;
+  }
+  
+  .service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 10;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .service-card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+  }
+  

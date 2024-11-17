@@ -1,0 +1,53 @@
+.features {  
+  padding: 50px;  
+  background: #0e0e0e;  
+  text-align: center; /* Center the text in the section */  
+}  
+
+.features h2 {  
+  font-size: 2.5rem;  
+  margin-bottom: 30px;  
+  color: white;  
+}  
+
+.feature-list {  
+  display: flex;  
+  justify-content: space-around;  
+  flex-wrap: wrap;  
+  align-items: center; 
+}  
+
+.new{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.new-sub{
+  background: rgba(59, 59, 59, 0.376);
+  border-radius: 10px; 
+  height: 80px;
+  width: 80px;
+}
+.feature-item {  
+   
+  /* padding: 10px;   */
+   /* Round the corners */  
+  margin: 10px;  
+  color: white;  
+  width: 60px; /* Fixed width for consistent sizing */  
+  height: 60px;
+  /* display: flex;  
+  flex-direction: column;   */
+  /* Center content inside */  
+  transition: transform 0.2s; /* Add a transition for hover effect */  
+}  
+
+.feature-item:hover {  
+  transform: scale(1.05); /* Scale up on hover */  
+}  
+
+.feature-item div {  
+  margin-top: 10px; /* Space between icon and text */  
+  font-weight: normal;  
+}

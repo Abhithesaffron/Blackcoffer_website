@@ -1,0 +1,237 @@
+/* General Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  padding: 10px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.logo img {
+  filter: invert(1);
+  margin-top: 6px;
+  height: 40px;
+  width: 160px;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 15px;
+  cursor: pointer;
+  color: white;
+}
+
+.arrow-icon {
+  font-size: 0.8rem;
+  margin-left: 10px;
+  color: #f3eaea; /* Set the color of the arrow */
+  transition: color 0.3s ease;
+}
+
+.menu li:hover .arrow-icon {
+  color: #11b59c; /* Change color on hover */
+}
+
+.menu li:hover {
+  color: #11b59c; /* Optional: Change the text color on hover */
+}
+
+/* Contact Container Styles */
+.contact-container {
+  background-color: rgba(53, 53, 53, 0.976);
+  padding: 4px;
+  height: 20px;
+  width: 90px;
+  border: 1px solid white;
+  border-radius: 0; /* Removed border radius */
+  opacity: 0.7;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.contact-btn {
+  background-color: rgba(90, 88, 88, 0.994);
+  color: #fff;
+  height: 20px;
+  width: 90px;
+  border: 1px solid white;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 0; /* Removed border radius */
+  opacity: 0.8;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Border Animation */
+.animated-border {
+  position: relative;
+  animation: borderTravel 4s infinite linear;
+}
+
+@keyframes borderTravel {
+  0% {
+      border-top: 0.5px solid white;
+      border-right: 0.5px solid transparent;
+      border-bottom: 0.5px solid transparent;
+      border-left: 0.5px solid transparent;
+  }
+  25% {
+      border-top: 0.5px solid transparent;
+      border-right: 0.5px solid white;
+      border-bottom: 0.5px solid transparent;
+      border-left: 0.5px solid transparent;
+  }
+  50% {
+      border-top: 0.5px solid transparent;
+      border-right: 0.5px solid transparent;
+      border-bottom: 0.5px solid white;
+      border-left: 0.5px solid transparent;
+  }
+  75% {
+      border-top: 0.5px solid transparent;
+      border-right: 0.5px solid transparent;
+      border-bottom: 0.5px solid transparent;
+      border-left: 0.5px solid white;
+  }
+  100% {
+      border-top: 0.5px solid white;
+      border-right: 0.5px solid transparent;
+      border-bottom: 0.5px solid transparent;
+      border-left: 0.5px solid transparent;
+  }
+}
+
+/* Icon within the button */
+.phone-icon {
+  margin-right: 4px;
+  font-size: 0.7rem;
+  opacity: 1;
+}
+
+.contact-container:hover {
+  opacity: 1;
+}
+
+.contact-btn:hover {
+  background-color: rgba(90, 88, 88, 0.994);
+}
+
+/* Search Icon */
+.search-icon {
+  color: white;
+  font-size: 1rem;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.search-input {
+  position: absolute;
+  right: 180px;
+  width: 200px;
+  padding: 5px;
+  font-size: 1rem;
+  background: white;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  outline: none;
+  z-index: 10;
+}
+
+.search-input::placeholder {
+  color: #555;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .menu {
+      display: none;
+      background: #001845;
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      width: 200px;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .menu.menu-open {
+      display: flex;
+  }
+
+  .menu li {
+      margin: 10px 0;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+
+  .actions {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+  }
+
+  .search-input {
+      position: absolute;
+      right: 180px;
+      width: 200px;
+      padding: 5px;
+      font-size: 1rem;
+      background: white;
+      border: 2px solid #007bff;
+      border-radius: 5px;
+      outline: none;
+      z-index: 10;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
